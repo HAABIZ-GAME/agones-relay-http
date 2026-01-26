@@ -6,7 +6,7 @@ Publish Agones GameServers and Fleets details to HTTP endpoints.
 
 A practical usage for the Agones Relay HTTP is when the operator/user wants to keep a centralized store of all the GameServers and Fleets running across multiples clusters. In this kind of topology, the operator can deploy one Agones Relay on each cluster and point all of them to a central endpoint. Therefore, persisting this information on any kind of datastore.
 
-This project was built on top of the [Agones Event Broadcaster](https://github.com/Octops/agones-event-broadcaster).
+This project was built on top of the [Agones Event Broadcaster](https://github.com/HAABIZ-GAME/agones-event-broadcaster).
 
 ### Agones
 > An open source, batteries-included, multiplayer dedicated game server scaling and orchestration platform that can run anywhere Kubernetes can run.

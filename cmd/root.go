@@ -19,7 +19,7 @@ import (
 	v1 "agones.dev/agones/pkg/apis/agones/v1"
 	"context"
 	"fmt"
-	"github.com/Octops/agones-event-broadcaster/pkg/broadcaster"
+	"github.com/HAABIZ-GAME/agones-event-broadcaster/pkg/broadcaster"
 	"github.com/Octops/agones-relay-http/internal/runtime"
 	"github.com/Octops/agones-relay-http/internal/version"
 	"github.com/Octops/agones-relay-http/pkg/broker"

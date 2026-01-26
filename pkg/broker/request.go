@@ -3,7 +3,7 @@ package broker
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/Octops/agones-event-broadcaster/pkg/events"
+	"github.com/HAABIZ-GAME/agones-event-broadcaster/pkg/events"
 	"github.com/pkg/errors"
 	"io"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"

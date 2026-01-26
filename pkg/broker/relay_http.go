@@ -3,7 +3,7 @@ package broker
 import (
 	"context"
 	"fmt"
-	"github.com/Octops/agones-event-broadcaster/pkg/events"
+	"github.com/HAABIZ-GAME/agones-event-broadcaster/pkg/events"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"net/http"

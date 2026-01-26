@@ -3,7 +3,7 @@ package broker
 import (
 	v1 "agones.dev/agones/pkg/apis/agones/v1"
 	"context"
-	"github.com/Octops/agones-event-broadcaster/pkg/events"
+	"github.com/HAABIZ-GAME/agones-event-broadcaster/pkg/events"
 	"github.com/Octops/agones-relay-http/internal/runtime"
 	"github.com/stretchr/testify/require"
 	"io/ioutil"
