@@ -16,21 +16,23 @@ limitations under the License.
 package cmd
 
 import (
-	v1 "agones.dev/agones/pkg/apis/agones/v1"
 	"context"
 	"fmt"
-	"github.com/HAABIZ-GAME/agones-event-broadcaster/pkg/broadcaster"
-	"github.com/Octops/agones-relay-http/internal/runtime"
-	"github.com/Octops/agones-relay-http/internal/version"
-	"github.com/Octops/agones-relay-http/pkg/broker"
-	"github.com/Octops/agones-relay-http/pkg/transport"
-	"github.com/pkg/errors"
-	"github.com/spf13/cobra"
-	"k8s.io/client-go/tools/clientcmd"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+
+	v1 "agones.dev/agones/pkg/apis/agones/v1"
+	"github.com/HAABIZ-GAME/agones-event-broadcaster/pkg/broadcaster"
+	"github.com/pkg/errors"
+	"github.com/spf13/cobra"
+	"k8s.io/client-go/tools/clientcmd"
+
+	"github.com/Octops/agones-relay-http/internal/runtime"
+	"github.com/Octops/agones-relay-http/internal/version"
+	"github.com/Octops/agones-relay-http/pkg/broker"
+	"github.com/Octops/agones-relay-http/pkg/transport"
 
 	homedir "github.com/mitchellh/go-homedir"
 	"github.com/spf13/viper"
