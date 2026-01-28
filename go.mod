@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	agones.dev/agones v1.55.0
-	github.com/HAABIZ-GAME/agones-event-broadcaster v0.0.3
+	github.com/HAABIZ-GAME/agones-event-broadcaster v0.0.4
 	github.com/labstack/echo/v4 v4.12.0
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/pkg/errors v0.9.1

@@ -1,9 +1,7 @@
 agones.dev/agones v1.55.0 h1:KqTzBY0lmMoh1mdYffPyObTun/k/eAYtE/QsXGSUF5c=
 agones.dev/agones v1.55.0/go.mod h1:9BYn8rfJSOjPvSRpjvEuuNcQ2alzUinrwqc6Ct3PBg0=
-github.com/HAABIZ-GAME/agones-event-broadcaster v0.0.2 h1:U/dtXIjcub+wBc81SEhGv6TFmEJIWCgXit0JrLqky6w=
-github.com/HAABIZ-GAME/agones-event-broadcaster v0.0.2/go.mod h1:e6eMMh/BWkfIjJvSP2lUMPF8MVrlCNUPQAjQAl2PuNo=
-github.com/HAABIZ-GAME/agones-event-broadcaster v0.0.3 h1:ZwelFfsCqss5aBDeWKeW/861A7SpkSk0aovD3vhX6qM=
-github.com/HAABIZ-GAME/agones-event-broadcaster v0.0.3/go.mod h1:e6eMMh/BWkfIjJvSP2lUMPF8MVrlCNUPQAjQAl2PuNo=
+github.com/HAABIZ-GAME/agones-event-broadcaster v0.0.4 h1:3tUffpmXojwGlgKieOPsyDIN2h3kyYYdq+fuYaEavjM=
+github.com/HAABIZ-GAME/agones-event-broadcaster v0.0.4/go.mod h1:e6eMMh/BWkfIjJvSP2lUMPF8MVrlCNUPQAjQAl2PuNo=
 github.com/Masterminds/semver/v3 v3.4.0 h1:Zog+i5UMtVoCU8oKka5P7i9q9HgrJeGzI9SA1Xbatp0=
 github.com/Masterminds/semver/v3 v3.4.0/go.mod h1:4V+yj/TJE1HU9XfppCwVMZq3I84lprf4nC11bSS5beM=
 github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=

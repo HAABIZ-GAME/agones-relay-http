@@ -34,7 +34,7 @@ import (
 	"github.com/Octops/agones-relay-http/pkg/broker"
 	"github.com/Octops/agones-relay-http/pkg/transport"
 
-	homedir "github.com/mitchellh/go-homedir"
+	"github.com/mitchellh/go-homedir"
 	"github.com/spf13/viper"
 )
 
@@ -98,7 +98,7 @@ to quickly create a Cobra application.`,
 			MetricsBindAddress:     ":9090",
 			MaxConcurrentReconcile: 1,
 		})
-		gsBroadcaster.WithWatcherFor(&v1.Fleet{}).WithWatcherFor(&v1.GameServer{})
+		gsBroadcaster.WithWatcherFor(&v1.Fleet{}).WithWatcherFor(&v1.GameServer{}).WithWatcherFor(&v1.GameServerSet{})
 		if err := gsBroadcaster.Build(); err != nil {
 			logger.Fatal(errors.Wrap(err, "error building broadcaster"))
 		}
