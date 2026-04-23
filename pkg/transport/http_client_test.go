@@ -18,7 +18,7 @@ import (
 )
 
 func TestNewClient(t *testing.T) {
-	logger := runtime.NewLogger(true)
+	logger := runtime.NewLogger("debug")
 
 	type args struct {
 		logger  *logrus.Entry
@@ -193,7 +193,7 @@ func TestClient_Do(t *testing.T) {
 		},
 	}
 
-	logger := runtime.NewLogger(true)
+	logger := runtime.NewLogger("debug")
 	ctx, cancel := context.WithCancel(context.Background())
 	go startServer(ctx, fmt.Sprintf(":%d", port))
 

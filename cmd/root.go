@@ -41,6 +41,7 @@ import (
 var (
 	cfgFile     string
 	verbose     bool
+	logLevel    string
 	masterURL   string
 	kubeconfig  string
 	syncPeriod  string
@@ -63,7 +64,11 @@ to quickly create a Cobra application.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	Run: func(cmd *cobra.Command, args []string) {
-		logger := runtime.NewLogger(verbose).WithField("app", "broadcaster")
+		level := logLevel
+		if verbose && level == "info" {
+			level = "debug"
+		}
+		logger := runtime.NewLogger(level).WithField("app", "broadcaster")
 		logger.Debug(version.Info())
 
 		cfg, err := clientcmd.BuildConfigFromFlags(masterURL, kubeconfig)
@@ -150,7 +155,8 @@ func init() {
 	rootCmd.Flags().StringVar(&onUpdateURL, "on-update-url", "http://localhost:8090/webhook", "list of URLs for OnUpdate Events separated by comma")
 	rootCmd.Flags().StringVar(&onDeleteURL, "on-delete-url", "http://localhost:8090/webhook", "list of URLs for OnDelete Events separated by comma")
 	rootCmd.Flags().StringVar(&onEventURL, "on-event-url", "", "list of URLs for all kinds of Events separated by comma. If informed the other url flags will be ignored.")
-	rootCmd.Flags().BoolVarP(&verbose, "verbose", "v", false, "enable verbose logs")
+	rootCmd.Flags().BoolVarP(&verbose, "verbose", "v", false, "enable verbose (debug) logs. Deprecated: use --log-level=debug")
+	rootCmd.Flags().StringVar(&logLevel, "log-level", "info", "set log level: trace, debug, info, warn, error, fatal, panic")
 }
 
 // initConfig reads in config file and ENV variables if set.

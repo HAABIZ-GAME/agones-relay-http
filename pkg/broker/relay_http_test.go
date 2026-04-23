@@ -104,7 +104,7 @@ func TestRelayHTTP_SendMessage(t *testing.T) {
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			logger := runtime.NewLogger(true)
+			logger := runtime.NewLogger("debug")
 
 			wg := sync.WaitGroup{}
 			wg.Add(1)
