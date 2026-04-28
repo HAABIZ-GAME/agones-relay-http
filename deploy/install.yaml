@@ -52,7 +52,7 @@ spec:
     spec:
       serviceAccountName: agones-relay-http
       containers:
-        - image: octops/agones-relay-http:0.1.0
+        - image: ghcr.io/haabiz-game/agones-relay-http:latest
           name: relay-http
           args:
             - --sync-period=15s
@@ -62,7 +62,7 @@ spec:
 #            - --on-delete-url=http://www.myendpoint.com/ondelete
             - --on-event-url=http://www.myendpoint.com/webhook
             - --verbose
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           resources:
             requests:
               cpu: "0.1"

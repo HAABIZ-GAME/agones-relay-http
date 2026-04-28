@@ -36,12 +36,15 @@ func (c *Client) Do(req *http.Request) (*http.Response, error) {
 	fn := func(attempt, retries int) error {
 		resp, err := c.client.Do(req)
 		if err != nil {
-			runtime.Logger().WithField("source", "client").Errorf("(%d/%d) %s %s failed", attempt, retries, req.Method, req.URL)
+			runtime.Logger().WithField("source", "client").WithError(err).Errorf("(%d/%d) %s %s failed", attempt, retries, req.Method, req.URL)
 			return err
 		}
 
 		defer resp.Body.Close()
 		response = resp
+		if resp.StatusCode >= 400 {
+			runtime.Logger().WithField("source", "client").Errorf("(%d/%d) %s %s returned %s", attempt, retries, req.Method, req.URL, resp.Status)
+		}
 		return nil
 	}
 
