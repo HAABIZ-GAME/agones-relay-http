@@ -9,7 +9,7 @@ import (
 
 func SetupSignal(cancel context.CancelFunc) {
 	go func() {
-		termChan := make(chan os.Signal)
+		termChan := make(chan os.Signal, 1)
 		signal.Notify(termChan, syscall.SIGINT, syscall.SIGTERM)
 		<-termChan
 		cancel()

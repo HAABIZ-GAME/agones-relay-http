@@ -1,6 +1,6 @@
 module github.com/Octops/agones-relay-http
 
-go 1.25.0
+go 1.26.0
 
 require (
 	agones.dev/agones v1.55.0
